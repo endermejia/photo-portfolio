@@ -1,0 +1,48 @@
+<header class="sticky-top bg-white">
+  <nav class="navbar navbar-expand">
+    <div class="container justify-content-center">
+      <ul class="navbar-nav navbar-expand fw-bold gap-3">
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLinkActive="active"
+             routerLink="/portfolio">
+            Portfolio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLinkActive="active"
+             routerLink="/sobre-mi">
+            Sobre mí
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLinkActive="active"
+             routerLink="/contacto">
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<footer>
+  <section class="footer center-div flex-column">
+    <div class="d-flex">
+      <ng-container *ngFor="let item of contact.items">
+        <a class="footer-icon"
+           href="{{item.link}}"
+           target="_blank"
+           title="{{item.name}}"
+           itemprop="significantLink">
+          <i class="bi-{{item.img}}"></i>
+        </a>
+      </ng-container>
+    </div>
+    <span>© {{year}} Copyright: Ainhoa Sánchez</span>
+  </section>
+</footer>

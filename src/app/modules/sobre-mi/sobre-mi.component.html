@@ -1,0 +1,56 @@
+<section class="main-section">
+  <article>
+    <div class="row mt-lg-5">
+      <div class="col-lg-6">
+        <div id="profile-img" class="pe-lg-2">
+          <img src="../../../assets/profile.webp" alt="profile_img">
+        </div>
+      </div>
+      <div class="col-lg-6 align-div">
+        <div class="ps-lg-2" *ngIf="profile.description.show">
+          <div class="mb-lg-5 mb-3">
+            <h1><b>
+              Hola, soy
+              <span class="text-primary text-gradient">{{profile.name}}</span>
+              <span class="hand">👋</span>
+            </b></h1>
+            <h3><b> {{profile.description.title}}.</b></h3>
+          </div>
+          <p *ngFor="let paragraph of profile.description.paragraphs"
+             [innerHTML]="paragraph">
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <div class="ps-lg-2" *ngIf="profile.description.show">
+          <div class="mb-lg-5 mb-3">
+            <h1><b>
+              <span class="text-primary text-gradient">Experiencia</span>
+            </b></h1>
+          </div>
+          <ng-container *ngFor="let item of profile.experience">
+            <div class="mb-5">
+              <app-item-card [item]="item"></app-item-card>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="ps-lg-2" *ngIf="profile.description.show">
+          <div class="mb-lg-5 mb-3">
+            <h1><b>
+              <span class="text-primary text-gradient">Educación</span>
+            </b></h1>
+          </div>
+          <ng-container *ngFor="let item of profile.education">
+            <div class="mb-5">
+              <app-item-card [item]="item"></app-item-card>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
