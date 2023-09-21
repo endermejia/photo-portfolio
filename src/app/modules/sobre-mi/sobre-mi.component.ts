@@ -21,20 +21,35 @@ export class SobreMiComponent {
     },
     experience: [
       {
+        name: 'Fotógrafa profesional',
+        organization: 'Ainhoa Sánchez',
+        link: window.location.href,
+        img: '../../../assets/profile.webp',
+        date_from: '2020-01-01',
+        date_to: new Date().toISOString().split('T')[0],
+        paragraphs: [
+          '<ul>' +
+          '<li>Fotografía de eventos</li>' +
+          '<li>Fotografía de retrato</li>' +
+          '<li>Fotografía corporativa</li>' +
+          '</ul>'
+        ]
+      },
+      {
         name: 'Comisario de exposiciones',
         organization: 'DOCULAB - Laboratorio de Documentación Histórica',
         link: 'https://doculab.grupos.uniovi.es/',
         img: '../../../assets/doculab.webp',
-        date_from: '2021-07-01',
-        date_to: '2021-07-01'
+        date_from: '2022-04-01',
+        date_to: '2022-07-01'
       },
       {
         name: 'Periodista',
         organization: 'ARAMULTIMÈDIA',
         link: 'https://www.aramultimedia.com/',
         img: '../../../assets/aramultimedia.webp',
-        date_from: '2015-07-01',
-        date_to: '2017-12-01'
+        date_from: '2016-06-01',
+        date_to: '2017-08-01',
       }
     ],
     education: [
@@ -46,17 +61,17 @@ export class SobreMiComponent {
         date_from: '2023-09-01',
         date_to: new Date().toISOString().split('T')[0]
       },
+      // {
+      //   name: 'Grado en Historia del Arte',
+      //   organization: 'UNED - Universidad Nacional de Educación a Distancia',
+      //   link: 'https://www.uned.es/',
+      //   img: '../../../assets/uned.webp',
+      //   date_from: '2022-09-01',
+      //   date_to: '2023-07-01'
+      // },
       {
         name: 'Grado en Historia del Arte',
-        organization: 'UNED - Universidad Nacional de Educación a Distancia',
-        link: 'https://www.uned.es/',
-        img: '../../../assets/uned.webp',
-        date_from: '2022-09-01',
-        date_to: '2023-07-01'
-      },
-      {
-        name: 'Grado en Historia del Arte',
-        organization: 'Universidad de Oviedo',
+        organization: 'UNIOVI - Universidad de Oviedo',
         link: 'https://www.uniovi.es/',
         img: '../../../assets/uniovi.webp',
         date_from: '2021-09-01',
@@ -64,19 +79,27 @@ export class SobreMiComponent {
       },
       {
         name: 'Grado en Historia del Arte',
-        organization: 'Universidad de València',
+        organization: 'UV - Universidad de València',
         link: 'https://www.uv.es/',
         img: '../../../assets/uv.webp',
         date_from: '2018-09-01',
-        date_to: '2020-07-01'
+        date_to: '2021-07-01'
       },
       {
         name: 'Grado en Periodismo',
-        organization: 'Universidad de Navarra',
+        organization: 'UCH CEU - Universidad Cardenal Herrera',
+        link: 'https://www.uchceu.es/',
+        img: '../../../assets/uch.webp',
+        date_from: '2016-09-01',
+        date_to: '2017-07-01',
+      },
+      {
+        name: 'Grado en Periodismo',
+        organization: 'UNAV- Universidad de Navarra',
         link: 'https://www.unav.edu',
         img: '../../../assets/unav.webp',
         date_from: '2015-09-01',
-        date_to: '2017-07-01',
+        date_to: '2016-07-01',
       }
     ]
   };
