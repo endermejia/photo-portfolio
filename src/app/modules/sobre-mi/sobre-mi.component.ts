@@ -22,9 +22,9 @@ export class SobreMiComponent {
     experience: [
       {
         name: 'Fotógrafa profesional',
-        organization: 'Ainhoa Sánchez',
+        organization: 'Ainhoa Sánchez | Photography',
         link: window.location.href,
-        img: '../../../assets/profile.webp',
+        img: '../../../assets/ainhoa.webp',
         date_from: '2020-01-01',
         date_to: new Date().toISOString().split('T')[0],
         paragraphs: [
