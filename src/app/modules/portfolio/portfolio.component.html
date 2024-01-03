@@ -4,6 +4,7 @@
       <div
         *ngFor="let slide of slides"
         [ngStyle]="{ backgroundImage: 'url(' + slide.img + ')' }"
+        [routerLink]="slide.route"
         class="keen-slider__slide number-slide">
         {{slide.title}}
       </div>

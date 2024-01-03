@@ -6,11 +6,13 @@ import localeEs from '@angular/common/locales/es';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { GallerySlideComponent } from './components/gallery-slide/gallery-slide.component';
 
 registerLocaleData(localeEs);
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GallerySlideComponent
   ],
   imports: [
     BrowserModule,

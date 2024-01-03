@@ -1,5 +1,12 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
-import KeenSlider, {KeenSliderInstance} from "keen-slider";
+import KeenSlider, {KeenSliderInstance} from 'keen-slider';
+
+interface Slide {
+  img: string;
+  title: string;
+  route?: string;
+  desc?: string;
+}
 
 @Component({
   selector: 'app-portfolio',
@@ -13,51 +20,21 @@ export class PortfolioComponent implements AfterViewInit, OnDestroy {
   @ViewChild('sliderRef') sliderRef!: ElementRef<HTMLElement>
 
   slider!: KeenSliderInstance;
-  slides: { img: string, title: string, desc?: string }[] = [
+  slides: Slide[] = [
     {
       img: 'https://picsum.photos/1920/1080?random=1',
       title: 'Eventos',
-      desc: 'Lorem'
+      route: 'eventos'
     },
     {
       img: 'https://picsum.photos/1920/1080?random=2',
       title: 'Paisajes',
-      desc: 'Lorem'
+      route: 'paisajes'
     },
     {
       img: 'https://picsum.photos/1920/1080?random=3',
       title: 'Retratos',
-      desc: 'Lorem'
-    },
-    {
-      img: 'https://picsum.photos/1920/1080?random=4',
-      title: 'Project 4',
-      desc: 'Lorem'
-    },
-    {
-      img: 'https://picsum.photos/1920/1080?random=5',
-      title: 'Project 5',
-      desc: 'Lorem'
-    },
-    {
-      img: 'https://picsum.photos/1920/1080?random=6',
-      title: 'Project 6',
-      desc: 'Lorem'
-    },
-    {
-      img: 'https://picsum.photos/1920/1080?random=7',
-      title: 'Project 7',
-      desc: 'Lorem'
-    },
-    {
-      img: 'https://picsum.photos/1920/1080?random=8',
-      title: 'Project 8',
-      desc: 'Lorem'
-    },
-    {
-      img: 'https://picsum.photos/1920/1080?random=9',
-      title: 'Project 9',
-      desc: 'Lorem'
+      route: 'retratos',
     },
   ]
 
