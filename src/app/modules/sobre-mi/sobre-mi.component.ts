@@ -1,5 +1,16 @@
 import {Component} from '@angular/core';
+import {ItemModel} from "./components/item-card/item-card.component";
 
+export interface ProfileModel {
+  name: string;
+  description: {
+    title: string;
+    show: boolean;
+    paragraphs: string[];
+  };
+  experience: ItemModel[];
+  education: ItemModel[];
+}
 @Component({
   selector: 'app-sobre-mi',
   templateUrl: './sobre-mi.component.html',
@@ -7,7 +18,7 @@ import {Component} from '@angular/core';
 })
 export class SobreMiComponent {
 
-  public readonly profile = {
+  public readonly profile: ProfileModel = {
     name: 'Ainhoa Sánchez',
     description: {
       title: 'Fotógrafa profesional',

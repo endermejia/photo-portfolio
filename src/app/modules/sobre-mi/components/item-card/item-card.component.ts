@@ -1,5 +1,15 @@
 import {Component, Input} from '@angular/core';
-import {ItemModel} from "../../models/item.model";
+
+export interface ItemModel {
+  name: string;
+  img?: string;
+  link?: string;
+  organization?: string;
+  place?: string;
+  date_from?: string;
+  date_to?: string;
+  paragraphs?: string[];
+}
 
 @Component({
   selector: 'app-item-card',
