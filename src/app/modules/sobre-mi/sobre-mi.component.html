@@ -11,10 +11,10 @@
           <div class="mb-lg-5 mb-3">
             <h1><b>
               Hola, soy
-              <span class="text-primary text-gradient">{{profile.name}}</span>
+              <span class="text-primary text-gradient">{{ profile.name }}</span>
               <span class="hand">👋</span>
             </b></h1>
-            <h3><b> {{profile.description.title}}.</b></h3>
+            <h3><b> {{ profile.description.title }}.</b></h3>
           </div>
           <p *ngFor="let paragraph of profile.description.paragraphs"
              [innerHTML]="paragraph">

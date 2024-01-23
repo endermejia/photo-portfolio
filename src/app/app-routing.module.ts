@@ -1,32 +1,35 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: 'portfolio',
     loadChildren: () =>
-      import('./modules/portfolio/portfolio.module').then(m => m.PortfolioModule)
+      import('./modules/portfolio/portfolio.module').then(
+        (m) => m.PortfolioModule,
+      ),
   },
   {
     path: 'sobre-mi',
     loadChildren: () =>
-      import('./modules/sobre-mi/sobre-mi.module').then(m => m.SobreMiModule)
+      import('./modules/sobre-mi/sobre-mi.module').then((m) => m.SobreMiModule),
   },
   {
     path: 'contacto',
     loadChildren: () =>
-      import('./modules/contacto/contacto.module').then(m => m.ContactoModule)
+      import('./modules/contacto/contacto.module').then(
+        (m) => m.ContactoModule,
+      ),
   },
   {
     path: '**',
     redirectTo: '/portfolio',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

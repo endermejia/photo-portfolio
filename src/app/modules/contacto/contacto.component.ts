@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.scss']
+  styleUrls: ['./contacto.component.scss'],
 })
 export class ContactoComponent {
-
-  public readonly contact  = {
+  public readonly contact = {
     title: 'Puedes contactar conmigo ...',
     show: true,
     email: 'ainhoasanchezyepes16@gmail.com',
@@ -26,7 +25,6 @@ export class ContactoComponent {
     phonePlaceholder: '',
     message: 'Mensaje',
     messagePlaceholder: '',
-    sendButton: 'Enviar mensaje'
+    sendButton: 'Enviar mensaje',
   };
-
 }

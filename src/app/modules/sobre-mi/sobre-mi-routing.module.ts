@@ -6,6 +6,6 @@ const routes: Routes = [{ path: '', component: SobreMiComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class SobreMiRoutingModule { }
+export class SobreMiRoutingModule {}

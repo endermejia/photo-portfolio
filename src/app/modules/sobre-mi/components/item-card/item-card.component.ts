@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 export interface ItemModel {
   name: string;
@@ -14,12 +14,10 @@ export interface ItemModel {
 @Component({
   selector: 'app-item-card',
   templateUrl: './item-card.component.html',
-  styleUrls: ['./item-card.component.scss']
+  styleUrls: ['./item-card.component.scss'],
 })
 export class ItemCardComponent {
-
   @Input() public item: ItemModel | undefined;
 
   public today: string = new Date().toISOString().split('T')[0];
-
 }

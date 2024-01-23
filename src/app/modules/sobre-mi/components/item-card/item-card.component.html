@@ -14,12 +14,12 @@
     </div>
     <div class="col-9">
       <div class="mx-3">
-        <h3><b>{{item.name}}</b></h3>
-        <h5>{{item.organization}}</h5>
+        <h3><b>{{ item.name }}</b></h3>
+        <h5>{{ item.organization }}</h5>
         <h6>
-          {{item.date_from | date: 'MMM yyyy'}}
+          {{ item.date_from | date: 'MMM yyyy' }}
           <span *ngIf="item.date_from && item.date_to">-</span>
-          {{item.date_to === today ? 'Presente' : (item.date_to | date: 'MMM yyyy')}}
+          {{ item.date_to === today ? 'Presente' : (item.date_to | date: 'MMM yyyy') }}
         </h6>
         <p *ngFor="let paragraph of item.paragraphs"
            [innerHTML]="paragraph">

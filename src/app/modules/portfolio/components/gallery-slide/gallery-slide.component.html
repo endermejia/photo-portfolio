@@ -2,10 +2,12 @@
   [settings]="settings"
   [onBeforeSlide]="onBeforeSlide"
 >
-  <a href="assets/35mm.webp">
-    <img alt="img1" src="assets/35mm.webp" />
-  </a>
-  <a href="assets/aramultimedia.webp">
-    <img alt="img2" src="assets/aramultimedia.webp" />
-  </a>
+  <ng-container *ngFor="let image of images[path]">
+    <a [href]="image.src">
+      <img
+        [alt]="image.alt"
+        [src]="image.src"
+      />
+    </a>
+  </ng-container>
 </lightgallery>

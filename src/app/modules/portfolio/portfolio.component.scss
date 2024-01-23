@@ -14,3 +14,11 @@
     opacity: 0.8;
   }
 }
+
+.keen-slider {
+  height: calc(100vh - 15em);
+
+  @media (max-width: 767px) {
+    height: calc(100vh - 12em);
+  }
+}

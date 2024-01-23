@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {PortfolioComponent} from './portfolio.component';
-import {GallerySlideComponent} from './components/gallery-slide/gallery-slide.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { PortfolioComponent } from './portfolio.component';
+import { GallerySlideComponent } from './components/gallery-slide/gallery-slide.component';
 
 const routes: Routes = [
   {
@@ -9,31 +9,30 @@ const routes: Routes = [
     children: [
       {
         path: 'eventos',
-        component: GallerySlideComponent
+        component: GallerySlideComponent,
       },
       {
         path: 'paisajes',
-        component: GallerySlideComponent
+        component: GallerySlideComponent,
       },
       {
         path: 'retratos',
-        component: GallerySlideComponent
+        component: GallerySlideComponent,
       },
       {
         path: '',
-        component: PortfolioComponent
+        component: PortfolioComponent,
       },
       {
         path: '**',
-        redirectTo: ''
-      }
-    ]
-  }
+        redirectTo: '',
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PortfolioRoutingModule {
-}
+export class PortfolioRoutingModule {}

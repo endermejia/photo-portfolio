@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {ItemModel} from "./components/item-card/item-card.component";
+import { Component } from '@angular/core';
+import { ItemModel } from './components/item-card/item-card.component';
 
 export interface ProfileModel {
   name: string;
@@ -11,13 +11,13 @@ export interface ProfileModel {
   experience: ItemModel[];
   education: ItemModel[];
 }
+
 @Component({
   selector: 'app-sobre-mi',
   templateUrl: './sobre-mi.component.html',
-  styleUrls: ['./sobre-mi.component.scss']
+  styleUrls: ['./sobre-mi.component.scss'],
 })
 export class SobreMiComponent {
-
   public readonly profile: ProfileModel = {
     name: 'Ainhoa Sánchez',
     description: {
@@ -28,7 +28,7 @@ export class SobreMiComponent {
         'Mi enfoque es versátil y abarca desde retratos hasta la promoción de eventos y aperturas de negocios.',
         'Mi objetivo principal es inspirar emociones a través de la lente y dejar una impresión duradera en cada proyecto.',
         '¡Bienvenidos a mi mundo visual!',
-      ]
+      ],
     },
     experience: [
       {
@@ -40,11 +40,11 @@ export class SobreMiComponent {
         date_to: new Date().toISOString().split('T')[0],
         paragraphs: [
           '<ul>' +
-          '<li>Fotografía de eventos</li>' +
-          '<li>Fotografía de retrato</li>' +
-          '<li>Fotografía corporativa</li>' +
-          '</ul>'
-        ]
+            '<li>Fotografía de eventos</li>' +
+            '<li>Fotografía de retrato</li>' +
+            '<li>Fotografía corporativa</li>' +
+            '</ul>',
+        ],
       },
       {
         name: 'Comisario de exposiciones',
@@ -52,7 +52,7 @@ export class SobreMiComponent {
         link: 'https://doculab.grupos.uniovi.es/',
         img: '../../../assets/doculab.webp',
         date_from: '2022-04-01',
-        date_to: '2022-07-01'
+        date_to: '2022-07-01',
       },
       {
         name: 'Periodista',
@@ -61,7 +61,7 @@ export class SobreMiComponent {
         img: '../../../assets/aramultimedia.webp',
         date_from: '2016-06-01',
         date_to: '2017-08-01',
-      }
+      },
     ],
     education: [
       {
@@ -70,7 +70,7 @@ export class SobreMiComponent {
         link: 'https://35mm.es/',
         img: '../../../assets/35mm.webp',
         date_from: '2023-09-01',
-        date_to: new Date().toISOString().split('T')[0]
+        date_to: new Date().toISOString().split('T')[0],
       },
       // {
       //   name: 'Grado en Historia del Arte',
@@ -86,7 +86,7 @@ export class SobreMiComponent {
         link: 'https://www.uniovi.es/',
         img: '../../../assets/uniovi.webp',
         date_from: '2021-09-01',
-        date_to: '2022-07-01'
+        date_to: '2022-07-01',
       },
       {
         name: 'Grado en Historia del Arte',
@@ -94,7 +94,7 @@ export class SobreMiComponent {
         link: 'https://www.uv.es/',
         img: '../../../assets/uv.webp',
         date_from: '2018-09-01',
-        date_to: '2021-07-01'
+        date_to: '2021-07-01',
       },
       {
         name: 'Grado en Periodismo',
@@ -111,8 +111,7 @@ export class SobreMiComponent {
         img: '../../../assets/unav.webp',
         date_from: '2015-09-01',
         date_to: '2016-07-01',
-      }
-    ]
+      },
+    ],
   };
-
 }
