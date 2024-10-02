@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'eventos',
+        path: 'sesiones',
         component: GallerySlideComponent,
       },
       {
@@ -16,7 +16,11 @@ const routes: Routes = [
         component: GallerySlideComponent,
       },
       {
-        path: 'retratos',
+        path: 'escalada',
+        component: GallerySlideComponent,
+      },
+      {
+        path: 'documental',
         component: GallerySlideComponent,
       },
       {

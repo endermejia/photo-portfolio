@@ -1,13 +1,42 @@
 <section class="main-section">
   <article class="mt-lg-3">
-    <div class="keen-slider" #sliderRef>
-      <div
-        *ngFor="let slide of slides"
-        [ngStyle]="{ backgroundImage: 'url(' + slide.img + ')' }"
-        [routerLink]="slide.route"
-        class="keen-slider__slide number-slide">
-        {{ slide.title }}
+    <div class="navigation-wrapper">
+      <div class="keen-slider" #sliderRef>
+        <div
+          *ngFor="let slide of slides"
+          [ngStyle]="{ backgroundImage: 'url(' + slide.img + ')' }"
+          class="keen-slider__slide number-slide">
+          <div class="slide-content" [routerLink]="slide.route">
+            <p>{{ slide.title }}</p>
+            <small>{{ slide.desc }}</small>
+          </div>
+        </div>
       </div>
+      <svg
+        class="arrow arrow--left"
+        (click)="slider.prev()"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
+        />
+      </svg>
+      <svg
+        class="arrow arrow--right"
+        (click)="slider.next()"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+      </svg>
+    </div>
+    <div class="dots">
+      <button
+        [ngClass]="i === slider?.track?.details?.rel ? 'dot active' : 'dot'"
+        (click)="slider.moveToIdx(i)"
+        *ngFor="let slide of slides; let i = index"
+      ></button>
     </div>
   </article>
 </section>

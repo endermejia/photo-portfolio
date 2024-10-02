@@ -2,11 +2,15 @@
   [settings]="settings"
   [onBeforeSlide]="onBeforeSlide"
 >
-  <ng-container *ngFor="let image of images[path]">
-    <a [href]="image.src">
+  <ng-container *ngFor="let image of images[path]; let index = index">
+    <a
+      [attr.href]="image.src"
+      [attr.data-lg-size]="image.size"
+      [attr.data-sub-html]="'<h4>' + image.subHtml + '</h4>'"
+    >
       <img
-        [alt]="image.alt"
-        [src]="image.src"
+        [src]="image.thumbnail"
+        [alt]="'Image ' + index"
       />
     </a>
   </ng-container>
