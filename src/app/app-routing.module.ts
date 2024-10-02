@@ -15,13 +15,6 @@ const routes: Routes = [
       import('./modules/sobre-mi/sobre-mi.module').then((m) => m.SobreMiModule),
   },
   {
-    path: 'contacto',
-    loadChildren: () =>
-      import('./modules/contacto/contacto.module').then(
-        (m) => m.ContactoModule,
-      ),
-  },
-  {
     path: '**',
     redirectTo: '/portfolio',
     pathMatch: 'full',

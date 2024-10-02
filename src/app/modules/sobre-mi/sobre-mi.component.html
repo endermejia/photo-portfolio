@@ -19,6 +19,19 @@
           <p *ngFor="let paragraph of profile.description.paragraphs"
              [innerHTML]="paragraph">
           </p>
+          <p>
+            <a href="mailto:{{profile.email}}" class="text-gradient">
+              <i class="bi-envelope mx-3"></i>
+              {{ profile.email }}
+            </a>
+            <a href="tel:{{profile.phone}}" class="text-gradient">
+              <i class="bi-phone mx-3"></i>
+              {{ profile.phone }}
+            </a>
+          </p>
+          <p>
+
+          </p>
         </div>
       </div>
     </div>

@@ -8,6 +8,8 @@ export interface ProfileModel {
     show: boolean;
     paragraphs: string[];
   };
+  email: string;
+  phone: string;
   experience: ItemModel[];
   education: ItemModel[];
 }
@@ -19,7 +21,7 @@ export interface ProfileModel {
 })
 export class SobreMiComponent {
   public readonly profile: ProfileModel = {
-    name: 'Ainhoa Sánchez',
+    name: 'Nhoa Noir',
     description: {
       title: 'Fotógrafa profesional',
       show: true,
@@ -30,6 +32,8 @@ export class SobreMiComponent {
         '¡Bienvenidos a mi mundo visual!',
       ],
     },
+    email: 'ainhoasanchezyepes16@gmail.com',
+    phone: '687 87 57 77',
     experience: [
       {
         name: 'Fotógrafa profesional',
