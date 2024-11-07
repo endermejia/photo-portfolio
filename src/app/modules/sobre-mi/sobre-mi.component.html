@@ -5,6 +5,16 @@
         <div id="profile-img" class="pe-lg-2">
           <img src="../../../assets/profile.webp" alt="profile_img">
         </div>
+        <p>
+          <a href="mailto:{{profile.email}}" class="text-gradient">
+            <i class="bi-envelope mx-3"></i>
+            {{ profile.email }}
+          </a>
+          <a href="tel:{{profile.phone}}" class="text-gradient">
+            <i class="bi-phone mx-3"></i>
+            {{ profile.phone }}
+          </a>
+        </p>
       </div>
       <div class="col-lg-6 align-div">
         <div class="ps-lg-2" *ngIf="profile.description.show">
@@ -18,19 +28,6 @@
           </div>
           <p *ngFor="let paragraph of profile.description.paragraphs"
              [innerHTML]="paragraph">
-          </p>
-          <p>
-            <a href="mailto:{{profile.email}}" class="text-gradient">
-              <i class="bi-envelope mx-3"></i>
-              {{ profile.email }}
-            </a>
-            <a href="tel:{{profile.phone}}" class="text-gradient">
-              <i class="bi-phone mx-3"></i>
-              {{ profile.phone }}
-            </a>
-          </p>
-          <p>
-
           </p>
         </div>
       </div>
